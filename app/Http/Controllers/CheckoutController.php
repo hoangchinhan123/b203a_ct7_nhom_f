@@ -151,6 +151,6 @@ class CheckoutController extends Controller
         public function delete_order($orderId){
         DB::table('tbl_order')->where('order_id',$orderId)->delete();
         Session::put('message','Xóa thương hiệu sản phẩm thành công');
-        return Redirect::to('manage_order');   
+        return Redirect::to('manage-order');   
     }
 }
