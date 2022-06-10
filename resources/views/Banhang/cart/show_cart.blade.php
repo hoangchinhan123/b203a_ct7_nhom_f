@@ -4,7 +4,7 @@
     <div class="table-responsive cart_info">
         <?php
         $content = Cart::content();
-
+        // echo $content;
         ?>
         @foreach($content as $v_content)
         <div>
@@ -37,21 +37,24 @@
                 </div>
             </div>
             <!--/#cart_items-->
-
             <section id="do_action">
                 <div class="">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="total_area" style="background: #e6e4df;">
                                 <ul>
-                                    <li style="color: #111111;font-size: 18px;font-weight: 500;">Tổng tiền <span>{{Cart::total().''.' vnđ'}}</span></li>
+                                    <!-- <span>{{Cart::total().''.' vnđ'}}</span> -->
+                                    <li style="color: #111111;font-size: 18px;font-weight: 500;">Tổng tiền
+                                        <span><?php
+                                                echo number_format($subtotal) . '' . 'vnđ';
+                                                ?></span>
+                                    </li>
                                 </ul>
                                 {{-- <a class="btn btn-default update" href="">Update</a> --}}
                                 <?php
                                 $customer_id = Session::get('customer_id');
                                 if ($customer_id != NULL) {
                                 ?>
-
                                     <a class="btn btn-default check_out" href="{{URL::to('checkout')}}" style="background: black;color: white;">Mua hàng</a>
                                 <?php
                                 } else {

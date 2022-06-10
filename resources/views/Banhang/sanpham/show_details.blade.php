@@ -5,8 +5,7 @@
                         <div class="col-sm-5">
                             <div class="view-product">
                                 <img src="{{URL::to('uploads/product/'.$value->product_image)}}" alt="" />
-                                <h3>ZOOM</h3>
-                            </div>
+                                </div>
                             <div id="similar-product" class="carousel slide" data-ride="carousel">
                                   <!-- Controls -->
                                   <a class="left item-control" href="#similar-product" data-slide="prev">
@@ -82,7 +81,7 @@
                                         </button>
                                     </form>
                                 </div>
-                            </div>      
+                            </div>
                         </div>
                     </div><!--/category-tab-->
                     @endforeach
@@ -90,7 +89,7 @@
                         <h2 class="title text-center">Sản Phẩm liên quan</h2>
                         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="item active">   
+                                <div class="item active">
                                        @foreach($relate as $key => $lienquan)
                                     <div class="col-sm-4">
                                         <div class="product-image-wrapper">
@@ -103,9 +102,9 @@
                                             </div>
                                         </div>
                                     </div>
-                            @endforeach  
-                                                                  
-                         
+                            @endforeach
+
+
                                 </div>
                             </div>
                              <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
@@ -113,7 +112,7 @@
                               </a>
                               <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
                                 <i class="fa fa-angle-right"></i>
-                              </a>          
+                              </a>
                         </div>
                     </div><!--/recommended_items-->
     @endsection

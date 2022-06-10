@@ -737,7 +737,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a class="Razzi" href="#" style="font-size: 28px; font-weight: 600; text-transform: none; color: #fff">Razzi.</a>
+                            <a class="Razzi" href="/GioiThieu" style="font-size: 28px; font-weight: 600; text-transform: none; color: #fff">Razzi.</a>
                         </div>
                     </div>
                     <div class="col-sm-4">
