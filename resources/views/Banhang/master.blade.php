@@ -757,7 +757,7 @@
                                 $customer_id = Session::get('customer_id');
                                 if ($customer_id != NULL) {
                                 ?>
-                                    <li><a href="{{URL::to('logout-checkout')}}"><i class="fa fa-lock"></i></a></li>
+                                    <li><a href="{{URL::to('logout-checkout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
 
                                 <?php
                                 } else {
