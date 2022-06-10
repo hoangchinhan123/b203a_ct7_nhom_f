@@ -37,40 +37,47 @@
                 </div>
             </div>
             <!--/#cart_items-->
-            <section id="do_action">
-                <div class="">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="total_area" style="background: #e6e4df;">
-                                <ul>
-                                    <!-- <span>{{Cart::total().''.' vnđ'}}</span> -->
-                                    <li style="color: #111111;font-size: 18px;font-weight: 500;">Tổng tiền
-                                        <span><?php
-                                                echo number_format($subtotal) . '' . 'vnđ';
-                                                ?></span>
-                                    </li>
-                                </ul>
-                                {{-- <a class="btn btn-default update" href="">Update</a> --}}
-                                <?php
-                                $customer_id = Session::get('customer_id');
-                                if ($customer_id != NULL) {
-                                ?>
-                                    <a class="btn btn-default check_out" href="{{URL::to('checkout')}}" style="background: black;color: white;">Mua hàng</a>
-                                <?php
-                                } else {
-                                ?>
 
-                                    <a class="btn btn-default check_out" href="{{URL::to('login-checkout')}}" style="background: black;color: white;">Mua hàng</a>
-                                <?php
-                                }
-                                ?>
-
-                            </div>
-                        </div>
-                    </div>
-            </section>
         </div>
         @endforeach
+        <section id="do_action">
+            <div class="">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="total_area" style="background: #e6e4df;">
+                            <ul>
+                                <!-- <span>{{Cart::total().''.' vnđ'}}</span> -->
+                                <li style="color: #111111;font-size: 18px;font-weight: 500;">Tổng tiền
+                                <!-- print all total products -->
+                                <?php
+                                $total = 0;
+                                foreach (Cart::content() as $v_content) {
+                                    $total += $v_content->price * $v_content->qty;
+                                }
+                                echo number_format($total) . '' . 'vnđ';
+                                ?>
+                                </li>
+                            </ul>
+                            {{-- <a class="btn btn-default update" href="">Update</a> --}}
+                            <?php
+                            $customer_id = Session::get('customer_id');
+                            if ($customer_id != NULL) {
+                            ?>
+                                <a class="btn btn-default check_out" href="{{URL::to('checkout')}}" style="background: black;color: white;">Mua hàng</a>
+                            <?php
+                            } else {
+                            ?>
+
+                                <a class="btn btn-default check_out" href="{{URL::to('login-checkout')}}" style="background: black;color: white;">Mua hàng</a>
+                            <?php
+                            }
+                            ?>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
     </div>
     </div>
 </section>
