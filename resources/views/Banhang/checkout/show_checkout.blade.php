@@ -1,11 +1,7 @@
 @extends("Banhang.master")
 @section("content")
 <section id="cart_items">
-		<div class="container">
-			<div class="register-req">
-				<p>Làm ơn đăng ký hoặc đăng nhập để thanh toán giỏ hàng và xem lại lịch sử mua hàng</p>
-			</div><!--/register-req-->
-
+		<div class="">
 			<div class="shopper-informations">
 				<div class="row">
 
