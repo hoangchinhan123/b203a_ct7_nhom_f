@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get("/","KiemTra@getMaster")->name("gioithieu");
 //Trang chủ
 Route::get("GioiThieu","KiemTra@getMaster")->name("gioithieu");
 Route::post('tim-kiem','KiemTra@search')->name("timkiem");
