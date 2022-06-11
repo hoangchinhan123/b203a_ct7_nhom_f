@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Jun 08, 2022 at 12:28 PM
--- Server version: 5.7.36
--- PHP Version: 7.4.26
+-- Máy chủ: 127.0.0.1:3306
+-- Thời gian đã tạo: Th6 11, 2022 lúc 08:19 AM
+-- Phiên bản máy phục vụ: 5.7.36
+-- Phiên bản PHP: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `thethao`
+-- Cơ sở dữ liệu: `nhom-f`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Cấu trúc bảng cho bảng `failed_jobs`
 --
 
 DROP TABLE IF EXISTS `failed_jobs`;
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Cấu trúc bảng cho bảng `migrations`
 --
 
 DROP TABLE IF EXISTS `migrations`;
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Đang đổ dữ liệu cho bảng `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -74,7 +74,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Cấu trúc bảng cho bảng `password_resets`
 --
 
 DROP TABLE IF EXISTS `password_resets`;
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_admin`
+-- Cấu trúc bảng cho bảng `tbl_admin`
 --
 
 DROP TABLE IF EXISTS `tbl_admin`;
@@ -100,19 +100,19 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_admin`
+-- Đang đổ dữ liệu cho bảng `tbl_admin`
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_email`, `admin_password`, `admin_name`, `admin_phone`, `created_at`, `updated_at`) VALUES
-(3, 'tansy7711@gmail.com', '123', 'tansi', '0947774929', NULL, NULL);
+(4, 'chinhanhoan@gmail.com', '123123', 'nhan', '0389959954', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_brand`
+-- Cấu trúc bảng cho bảng `tbl_brand`
 --
 
 DROP TABLE IF EXISTS `tbl_brand`;
@@ -124,14 +124,14 @@ CREATE TABLE IF NOT EXISTS `tbl_brand` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`brand_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_brand`
+-- Đang đổ dữ liệu cho bảng `tbl_brand`
 --
 
 INSERT INTO `tbl_brand` (`brand_id`, `brand_name`, `brand_desc`, `brand_status`, `created_at`, `updated_at`) VALUES
-(4, 'DeWalt', 'DeWalt is', 0, NULL, NULL),
+(4, 'DeWalt', 'DeWalt', 0, NULL, NULL),
 (5, 'Black & Decker', 'Black & Decker is', 0, NULL, NULL),
 (6, 'Bosch', 'Bosch is', 0, NULL, NULL),
 (7, 'Makita', 'Makita is', 0, NULL, NULL),
@@ -140,7 +140,7 @@ INSERT INTO `tbl_brand` (`brand_id`, `brand_name`, `brand_desc`, `brand_status`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_category_product`
+-- Cấu trúc bảng cho bảng `tbl_category_product`
 --
 
 DROP TABLE IF EXISTS `tbl_category_product`;
@@ -155,11 +155,11 @@ CREATE TABLE IF NOT EXISTS `tbl_category_product` (
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_category_product`
+-- Đang đổ dữ liệu cho bảng `tbl_category_product`
 --
 
 INSERT INTO `tbl_category_product` (`category_id`, `category_name`, `category_desc`, `category_status`, `created_at`, `updated_at`) VALUES
-(7, 'Mũi khoan', 'aaaaaa', 0, NULL, NULL),
+(7, 'Mũi khoan', 'aaaaaa', 1, NULL, NULL),
 (8, 'Máy bắt vít', 'aaaaa', 0, NULL, NULL),
 (9, 'Cưa', 'aaaa', 0, NULL, NULL),
 (10, 'Búa', 'aaaaa', 0, NULL, NULL),
@@ -174,7 +174,7 @@ INSERT INTO `tbl_category_product` (`category_id`, `category_name`, `category_de
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_customers`
+-- Cấu trúc bảng cho bảng `tbl_customers`
 --
 
 DROP TABLE IF EXISTS `tbl_customers`;
@@ -187,10 +187,10 @@ CREATE TABLE IF NOT EXISTS `tbl_customers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_customers`
+-- Đang đổ dữ liệu cho bảng `tbl_customers`
 --
 
 INSERT INTO `tbl_customers` (`customer_id`, `customer_name`, `customer_email`, `customer_password`, `customer_phone`, `created_at`, `updated_at`) VALUES
@@ -200,12 +200,14 @@ INSERT INTO `tbl_customers` (`customer_id`, `customer_name`, `customer_email`, `
 (4, 'tansi', 'tansii7711@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '123', NULL, NULL),
 (5, 'tansiaa', 'tansy77111@gmail.com', 'e034fb6b66aacc1d48f445ddfb08da98', '09477745251', NULL, NULL),
 (6, 'tansinguyen', 'si7@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '123456789', NULL, NULL),
-(7, 'nguyensi', 'nguyensi@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '01254879632', NULL, NULL);
+(7, 'nguyensi', 'nguyensi@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '01254879632', NULL, NULL),
+(8, 'nhan', 'chinhanhoan@gmail.com', '3cd4d9aa549bf79fd32fb276ff139f39', '12345', NULL, NULL),
+(9, 'nhan1', 'hoanchinhan@gmail.com', '4297f44b13955235245b2497399d7a93', '01223101219', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_order`
+-- Cấu trúc bảng cho bảng `tbl_order`
 --
 
 DROP TABLE IF EXISTS `tbl_order`;
@@ -219,21 +221,19 @@ CREATE TABLE IF NOT EXISTS `tbl_order` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_order`
+-- Đang đổ dữ liệu cho bảng `tbl_order`
 --
 
 INSERT INTO `tbl_order` (`order_id`, `customer_id`, `shipping_id`, `payment_id`, `order_total`, `order_status`, `created_at`, `updated_at`) VALUES
-(1, 2, 3, 1, '13,444.31', 'Đang chờ xử lý', NULL, NULL),
-(3, 3, 4, 3, '18,755,000.00', 'Đang chờ xử lý', NULL, NULL),
-(15, 7, 19, 15, '60,500.00', 'Đang chờ xử lý', NULL, NULL);
+(16, 9, 25, 16, '847,000.00', 'Đang chờ xử lý', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_order_details`
+-- Cấu trúc bảng cho bảng `tbl_order_details`
 --
 
 DROP TABLE IF EXISTS `tbl_order_details`;
@@ -247,10 +247,10 @@ CREATE TABLE IF NOT EXISTS `tbl_order_details` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`order_details_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_order_details`
+-- Đang đổ dữ liệu cho bảng `tbl_order_details`
 --
 
 INSERT INTO `tbl_order_details` (`order_details_id`, `order_id`, `product_id`, `product_name`, `product_price`, `product_sales_quantity`, `created_at`, `updated_at`) VALUES
@@ -260,12 +260,13 @@ INSERT INTO `tbl_order_details` (`order_details_id`, `order_id`, `product_id`, `
 (10, 13, 31, 'giày nike đen', 1200000, 1, NULL, NULL),
 (11, 13, 35, 'giày vàng', 10000000, 1, NULL, NULL),
 (12, 14, 34, 'giày sĩ xanh dương', 15000000, 4, NULL, NULL),
-(13, 15, 27, 'bóng xanh', 50000, 1, NULL, NULL);
+(13, 15, 27, 'bóng xanh', 50000, 1, NULL, NULL),
+(14, 16, 65, 'BẮN ĐINH HƠI T RYOBI NỘI ĐỊA ÚC.', 700000, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_payment`
+-- Cấu trúc bảng cho bảng `tbl_payment`
 --
 
 DROP TABLE IF EXISTS `tbl_payment`;
@@ -276,10 +277,10 @@ CREATE TABLE IF NOT EXISTS `tbl_payment` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_payment`
+-- Đang đổ dữ liệu cho bảng `tbl_payment`
 --
 
 INSERT INTO `tbl_payment` (`payment_id`, `payment_method`, `payment_status`, `created_at`, `updated_at`) VALUES
@@ -297,17 +298,18 @@ INSERT INTO `tbl_payment` (`payment_id`, `payment_method`, `payment_status`, `cr
 (12, '1', 'Đang chờ xử lý', NULL, NULL),
 (13, '2', 'Đang chờ xử lý', NULL, NULL),
 (14, '2', 'Đang chờ xử lý', NULL, NULL),
-(15, '2', 'Đang chờ xử lý', NULL, NULL);
+(15, '2', 'Đang chờ xử lý', NULL, NULL),
+(16, '2', 'Đang chờ xử lý', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_product`
+-- Cấu trúc bảng cho bảng `tbl_product`
 --
 
 DROP TABLE IF EXISTS `tbl_product`;
 CREATE TABLE IF NOT EXISTS `tbl_product` (
-  `product_id` int(10) UNSIGNED NOT NULL,
+  `product_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL,
   `product_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -319,10 +321,10 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_product`
+-- Đang đổ dữ liệu cho bảng `tbl_product`
 --
 
 INSERT INTO `tbl_product` (`product_id`, `category_id`, `brand_id`, `product_name`, `product_desc`, `product_content`, `product_price`, `product_image`, `product_status`, `created_at`, `updated_at`) VALUES
@@ -345,19 +347,19 @@ INSERT INTO `tbl_product` (`product_id`, `category_id`, `brand_id`, `product_nam
 (60, 10, 7, 'Máy khoan búa và vặn vít dùng pin DHP453SFX8 Makita', 'Máy khoan búa và vặn vít dùng pin DHP453SFX8 MakitaMáy khoan búa và vặn vít dùng pin DHP453SFX8 Makita thường được dùng để khoan lỗ, bắt vít trên đa dạng các loại vật liệu, đáp ứng các yêu cầu công việc hay nhu cầu sử dụng khác nhau. Sở hữu thiết kế nhỏ gọn, máy cho phép người dùng thoải mái thao tác trong khoảng thời gian dài và liên tục. Bên cạnh đó, công suất hoạt động vô cùng mạnh mẽ cũng là một trong những ưu điểm vượt trội của dòng máy này.Gia Phúc Ân chuyên cung cấp các loại máy công suất cao. Các dòng máy Makita đảm bảo chất lượng. Giao hàng siêu tốc trong nội thành. Mức giá cạnh tranh nhất trên thị trường kèm theo nhiều ưu đãi hấp dẫn.####Sản phẩm bao gồm1 pin + 1 sạcDung lượng pin3.0 Ah/ 18VĐường kính khoanThép 13mm, gỗ 36mm, tường 13mmTốc độ đậpCao 19,500 l/p, thấp 6,000 l/pTốc độ không tảiCao 1,300 v/p, 400 v/pLực vặn tối đa: Cứng/mềm42/27 N.mTrọng lượng1.7kg', 'dể dùng', 3784000, 'Máy khoan búa và vặn vít dùng pin DHP453SFX8 Makita.jpg', 0, NULL, NULL),
 (61, 10, 7, 'Máy Khoan Búa(16Mm)(26 Cái Phụ Kiện) M8100KX2B - Makita', 'Máy Khoan Búa(16Mm)(26 Cái Phụ Kiện) M8100KX2BMáy Khoan Búa(16Mm)(26 Cái Phụ Kiện) M8100KX2B có công suất hoạt động mạnh mẽ, dễ dàng xử lý các vật liệu cứng như bê tông, thép, sắt... một cách dễ dàng. Máy khoan được cấu tạo từ chất liệu cao cấp cùng thiết kế thông minh, đảm bảo sự an toàn và thuận lợi cho người tiêu dùng.Gia Phúc Ân chuyên cung cấp các loại máy công suất cao. Đặc biệt các sản phẩm Makita chất lượng cao. Giao hàng siêu tốc trong nội thành. Mức giá cạnh tranh nhất trên thị trường kèm theo nhiều ưu đãi hấp dẫn. Bảo hành hấp dẫn với các sản phẩm lên đến 12 tháng. Liên hệ ngay: 0977446556####Công suất710WKhả năng khoan bê tông/ thép/ gỗ16/13/30Khả năng đầu cặp1.5 – 13mmTốc độ đập0 – 48,000l/pTốc độ không tải0 – 3.200v/pKích thước296x77x202mmTrọng lượng2.1kgDây dẫn điện2.0 m####Bộ 26 món phụ kiện', 'dể dùng', 2266000, 'Máy Khoan Búa(16Mm)(26 Cái Phụ Kiện) M8100KX2B - Makita.jpg', 0, NULL, NULL),
 (62, 11, 8, 'JIMI Bộ tua vít chính xác đa năng JIMI 30 IN 1', 'Thông số kỹ thuật:Thương hiệuJIMIMàu sắcMàu xám đenChất liệu vỏABS + sơn cao suXử lý vật liệuHợp kim nhômVật liệu đầu lôĐài Loan nhập khẩu thép hợp kim S2Kích thước tay cầm115 x 10.8mmKích thước đầu lô45 x 4mmKích thước nhíp122 x 10mmKích cỡ gói166 x 77 x 26mm28 cái Loại bit: - PH2 / PH1 / PH0 / PH00 / PH000- H1.5 / H2.0 / H3.0- SL4.0 / SL3.0 / SL2.0 / SL1.5- T15H / T10H / T8H / T6H / T5H- T4/T3 / T2- Y2.0 / 3.0 / 4.0- U2.6- Tam giác2.3 Đặc trưng:- Tuốc nơ vít chính xác JIMI với 28 đầu có độ chính xác cao.- Đầu lô chính xác, thiết bị bảo vệ mạnh mẽ hơn.-Thiết kế giao diện từ tính mạnh mẽ, sử dụng linh hoạt hơn, tránh hỏng hóc.- Lưỡi bằng nhôm, bề mặt lưỡi đẹp và tinh tế hơn, tạo cảm giác thoải mái hơn.-Nút phóng tích hợp, pcông nghệ atent, hàng nghiêng, lựa chọn tiêu đề hàng loạt trực quan và thuận tiện hơn. -Có 10 loại, phù hợp cho đồng hồ thạch anh, máy ảnh, radio, máy tính, điện thoại di động, đồ chơi trẻ em, v.v. Đáp ứng hầu hết các yêu cầu bảo dưỡng chính xác hàng ngày.Gói bao gồm', 'dể dùng', 440473, 'JIMI Bộ tua vít chính xác đa năng JIMI 30 IN 1.jpg', 0, NULL, NULL),
-(63, 11, 8, 'Bộ vặn vít Pick & Click 44 món - Bộ vặn vít Pick & Click 44 món', 'Mã máy : Hãng SX : BoschXuất xứ: : BoschBảo hành : 6 thángHotline : 0938.880.628Giá đã bao gồm thuế 10% VAT.####Bộ vặn vít Pick & Click 44 mónĐầu vít:PH2 x 65mmSố lượng10 mũi', 'dể dùng', 539000, 'htools-5001.jpg', 0, NULL, NULL),
-(64, 11, 8, 'MÁY BẮN ĐINH RYOBI R18NL', 'MÁY BẮN ĐINH RYOBI R18NL. MÁY BẮN ĐINH RYOBI R18NL. RYOBI 18V ONE + Hệ thống có hơn 40 công cụ làm việc với nền tảng pin cùng, đem lại cho bạn sự linh hoạt tối hậu trong việc lựa chọn công cụ để có được công việc của bạn thực hiện. Bạn có thể có được thực hiện nhiều hơn trong thời gian ít hơn và cải thiện hiệu suất của tất cả các công cụ RYOBI 18V bao giờ thực hiện. Không có vấn đề làm thế nào bạn thêm nó lên, ONE + là một trong những hệ thống mang lại nhiều hơn nữa. lưu ý. Máyozitovà máyryobilà hàng nội địa của ÚC do china sản suất đạt tiêu chuẩn của úcVà được việt nam nhập vể là hàng đã qua sử dụng và đã đươc tuyển chọn hàng đạt chất lượng cửa úc các máy đều mới khoảng 90-95% chúng tôi nói rõ đễ khách hàng khỏi thác mắc, trân trọng cám ơn quý khách hàng đã ủng hộ sản phẩm cùa chúng tôi trong thời gian qua.Đa dạng sản phẩm. Cam kết hà. ng như hì. Đảm bảo về chất lượng sản phẩm. Liê. n hệ với shop nếu cần được tư vấn chi tiết về sản phẩm.', 'dể dùng', 1700000, 'MÁY BẮN ĐINH RYOBI R18NL.jpg', 0, NULL, NULL),
-(65, 14, 8, 'BẮN ĐINH HƠI T RYOBI NỘI ĐỊA ÚC.', 'Features: máy bắn đinh dùng hơi, sung hoi ban dinh, súng bắn đinh dùng hơi, súng bắn đinh hơi, súng hơi bắn đinh. MÔ TẢ SẢN PHẨM. ĐÃ QUA SỬ DỤNG ĐẸP 95%. DÙNG BẮN GỖ. CHIỀU DÀI ĐINH 2CM-6CM. 1015 Qlo 1A, Bình Trị Đông A, Q. Bình Tân, HCM, Nguyen Anh An.Cam kết hàng đúng mô tả. Chất lượng đảm bảo An toàn đến Sức Khỏe người sử dụng. Đa dạng mẫu mã, màu sắc, kích cỡ. Đảm bảo cung cấp các sản phẩm đang được săn đón trên thị trường hiện nay. Xin vui lòng inbox Shop để được tư vấn thêm về chế độ Bảo Hành (nếu có) và thông tin chi tiết Sản phẩm.', 'dể dùng', 700000, 'BẮN ĐINH HƠI T RYOBI NỘI ĐỊA ÚC.jpg', 0, NULL, NULL);
+(63, 11, 8, 'Bộ vặn vít Pick & Click 44 món - Bộ vặn vít Pick & Click 44 món', 'Mã máy : Hãng SX : BoschXuất xứ: : BoschBảo hành : 6 thángHotline : 0938.880.628Giá đã bao gồm thuế 10% VAT.####Bộ vặn vít Pick & Click 44 mónĐầu vít:PH2 x 65mmSố lượng10 mũi', 'dể dùng, gọn nhẹ', 539000, 'htools-5001.jpg', 0, NULL, NULL),
+(64, 11, 8, 'MÁY BẮN ĐINH RYOBI R18NL', 'MÁY BẮN ĐINH RYOBI R18NL. MÁY BẮN ĐINH RYOBI R18NL. RYOBI 18V ONE + Hệ thống có hơn 40 công cụ làm việc với nền tảng pin cùng, đem lại cho bạn sự linh hoạt tối hậu trong việc lựa chọn công cụ để có được công việc của bạn thực hiện. Bạn có thể có được thực hiện nhiều hơn trong thời gian ít hơn và cải thiện hiệu suất của tất cả các công cụ RYOBI 18V bao giờ thực hiện. Không có vấn đề làm thế nào bạn thêm nó lên, ONE + là một trong những hệ thống mang lại nhiều hơn nữa. lưu ý. Máyozitovà máyryobilà hàng nội địa của ÚC do china sản suất đạt tiêu chuẩn của úcVà được việt nam nhập vể là hàng đã qua sử dụng và đã đươc tuyển chọn hàng đạt chất lượng cửa úc các máy đều mới khoảng 90-95% chúng tôi nói rõ đễ khách hàng khỏi thác mắc, trân trọng cám ơn quý khách hàng đã ủng hộ sản phẩm cùa chúng tôi trong thời gian qua.Đa dạng sản phẩm. Cam kết hà. ng như hì. Đảm bảo về chất lượng sản phẩm. Liê. n hệ với shop nếu cần được tư vấn chi tiết về sản phẩm.', 'dể dùng, đẹp', 1700000, 'MÁY BẮN ĐINH RYOBI R18NL.jpg', 0, NULL, NULL),
+(65, 14, 8, 'BẮN ĐINH HƠI T RYOBI NỘI ĐỊA ÚC.', 'Features: máy bắn đinh dùng hơi, sung hoi ban dinh, súng bắn đinh dùng hơi, súng bắn đinh hơi, súng hơi bắn đinh. MÔ TẢ SẢN PHẨM. ĐÃ QUA SỬ DỤNG ĐẸP 95%. DÙNG BẮN GỖ. CHIỀU DÀI ĐINH 2CM-6CM. 1015 Qlo 1A, Bình Trị Đông A, Q. Bình Tân, HCM, Nguyen Anh An.Cam kết hàng đúng mô tả. Chất lượng đảm bảo An toàn đến Sức Khỏe người sử dụng. Đa dạng mẫu mã, màu sắc, kích cỡ. Đảm bảo cung cấp các sản phẩm đang được săn đón trên thị trường hiện nay. Xin vui lòng inbox Shop để được tư vấn thêm về chế độ Bảo Hành (nếu có) và thông tin chi tiết Sản phẩm.', 'dể dùng, tiện ích, mẫu dáng đẹp, dep', 700000, 'BẮN ĐINH HƠI T RYOBI NỘI ĐỊA ÚC.jpg', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_shipping`
+-- Cấu trúc bảng cho bảng `tbl_shipping`
 --
 
 DROP TABLE IF EXISTS `tbl_shipping`;
 CREATE TABLE IF NOT EXISTS `tbl_shipping` (
-  `shipping_id` int(10) UNSIGNED NOT NULL,
+  `shipping_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `shipping_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `shipping_address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `shipping_phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -366,22 +368,39 @@ CREATE TABLE IF NOT EXISTS `tbl_shipping` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`shipping_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `tbl_shipping`
+-- Đang đổ dữ liệu cho bảng `tbl_shipping`
 --
 
 INSERT INTO `tbl_shipping` (`shipping_id`, `shipping_name`, `shipping_address`, `shipping_phone`, `shipping_email`, `shipping_notes`, `created_at`, `updated_at`) VALUES
-(16, 'nguyentansi', '123a', '0457854245', 'si7@gmail.com', 'a', NULL, NULL),
-(17, 'nguyentansi', '123a', '04578542451', 'tansi711@gmail.com', 'h', NULL, NULL),
-(18, 'nguyensi', '123b', '0123597894', 'nguyensi@gmail.com', 'a', NULL, NULL),
-(19, 'nguyensi', '123b', '0123456987', 'nguyensi@gmail.com', 'a', NULL, NULL);
+(20, 'nhansư', 'a', '0795818140', 'chinhanhoan@gmail.com', '123d', NULL, NULL),
+(21, 'ádas', 'ưsa', '1234151231', 'hoang@gmail.com', 'ấdkadjk', NULL, NULL),
+(22, 'hoang', 'qưefa', '012398541', 'chi@gmail.com', 'adfasdk', NULL, NULL),
+(23, 'nhansư', '123d', '0795818140', 'chinhanhoan@gmail.com', 'a', NULL, NULL),
+(24, 'nhansư', '12 đường 28', '1341314513', 'hoanchinhan@gmail.com', 'a', NULL, NULL),
+(25, 'nhanh', 'a', '12313', 'nhan@gmail.com', 'ads', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `tbl_social`
+--
+
+DROP TABLE IF EXISTS `tbl_social`;
+CREATE TABLE IF NOT EXISTS `tbl_social` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `provider_user_id` varchar(100) NOT NULL,
+  `provider` varchar(100) NOT NULL,
+  `user` int(11) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `users`
 --
 
 DROP TABLE IF EXISTS `users`;
