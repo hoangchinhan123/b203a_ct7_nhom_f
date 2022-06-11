@@ -54,7 +54,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="hide">
                                     <label for="exampleInputPassword1">Hiện thị</label>
                                     <select  name="product_status" class="form-control input-sm m-bot15">
                                         <option value="0">hiện </option>

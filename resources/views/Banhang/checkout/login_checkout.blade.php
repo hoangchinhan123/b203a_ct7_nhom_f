@@ -13,7 +13,9 @@
                         <input type="text" name="email_account" placeholder="Tài khoản" />
                         <input type="password" name="password_account" placeholder="Password" />
                         <button type="submit" class="btn btn-default">Đăng nhập</button>
-                    </form>
+                    </form>      
+		            <a href="{{url('/login-facebook')}}">Login Facebook</a> |
+		            <a href="{{url('/login-google')}}">Login Google</a>
                 </div>
                 <!--/login form-->
             </div>
